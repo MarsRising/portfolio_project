@@ -262,6 +262,8 @@ while otter.hp>0 and mars.hp>0 or steffi.hp>0 or sam.hp>0:
                 if healing2=="1":
                     aaaa
                     print("Sam hugs", mars.name+ ". The hug is mystical! It recovers", str(sam.hp_effect), "HP!")
+                    if mars.hp<0:
+                        mars.hp=0
                     mars.hp+=sam.hp_effect
                     if mars.hp>2500:
                         mars.hp=2500
@@ -270,6 +272,8 @@ while otter.hp>0 and mars.hp>0 or steffi.hp>0 or sam.hp>0:
                 if healing2=="2":
                     aaaa
                     print("Sam hugs", steffi.name+ ". The hug is mystical! It recovers", str(sam.hp_effect), "HP!")
+                    if steffi.hp<0:
+                        steffi.hp=0
                     steffi.hp+=sam.hp_effect
                     if steffi.hp>2500:
                         steffi.hp=2500
@@ -278,6 +282,8 @@ while otter.hp>0 and mars.hp>0 or steffi.hp>0 or sam.hp>0:
                 if healing2=="3":
                     aaaa
                     print("Sam hugs", sam.name+ ". The hug is mystical! It recovers", str(sam.hp_effect), "HP!")
+                    if sam.hp<0:
+                        sam.hp=0
                     sam.hp+=sam.hp_effect
                     if sam.hp>2500:
                         sam.hp=2500
