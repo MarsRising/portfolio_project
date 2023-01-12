@@ -12,8 +12,8 @@ ssss=time.sleep(3)
 aaaa=time.sleep(.5)
 
 
-otter=Character("Sonja The Evil Otter Empress", 9999, 800, 600, 0)
-mars=Character("Mars the Kitty Cat Witch", 2500, 300, 800, 300)
+otter=Character("Sonja The Evil Otter Empress", 9999, 800, 600, 2000)
+mars=Character("Mars the Kitty Cat Witch", 2500, 300, 1000, 300)
 steffi=Character("Steffi the Tigress", 2500, 1000, 200, 500)
 sam=Character("Sam the Sloth", 2500, 1200, 0, 1000)
 #turn is set for the otter's major attack to only happen every 3 turns
@@ -111,8 +111,13 @@ while otter.hp>0 and mars.hp>0 or steffi.hp>0 or sam.hp>0:
                 break#break to keep the fight going
             if choice1=="2":
                 aaaa
-                print("'When the wind howls, so forth comes the spirit of the owl!'\n"+mars.name, "casts a Hex on", otter.name+'.', "The Spirit of the Owl makes", otter.name, "pay for her sins!", str(mars.magic), 'Damage!')
-                otter.hp-=mars.magic
+                m_attack=random.randint(1,10)
+                if m_attack>=8:
+                    print("'When the wind howls, so forth comes the spirit of the owl!'\n"+mars.name, "casts a Hex on", otter.name+'.', "The Spirit of the Owl makes", otter.name, "pay for her sins!", str(mars.magic), 'Damage!')
+                    otter.hp-=mars.magic
+                if m_attack<8:
+                    print("'While the Birds work to plant the seeds, one destroys Gaia out of Greed!'\n" +mars.name, "casts a spell to summon the spirits of wild birds! The bird's spirits rise up from behind", otter.name, "and they all swarm in pecking at her! 800 Damage!")
+                    otter.hp-=800    
                 if otter.hp>0:
                     print(otter.name, "HP:",str(otter.hp))
                 elif otter.hp<=0:
